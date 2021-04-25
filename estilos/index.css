@@ -63,10 +63,12 @@
     margin: 15px;
     width: var(--page-width);
     font-size: var(--font-size);
+    opacity: 0;
 
     animation: channelIntro 1s linear;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -3.5s + (var(--order) * 150ms));
+    animation-delay: calc(var(--scroll) * -3.5s + (var(--order) * 100ms));
+    animation-fill-mode: forwards;
 }
 
 @keyframes channelIntro {
