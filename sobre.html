@@ -5,6 +5,7 @@
         <meta charset="UTF-8"/>
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="./estilos/sobre.css"/>
         <link rel="icon" href="img/logoIcon.png"/>
     </head>
     <body>
@@ -35,45 +36,71 @@
 
             <h1>A nossa Equipa</h1>
             <div class="grelha-equipa">
-                <a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/linusgsebastian">
                     <img src="./img/Equipa/linus.png"/>
+                    <div class="tooltiptext">@linusgsebastian</div>
                     <h3>Linus</h3>
                     <p>CEO</p>
                 </a>
-                <a>
-                    <img src="./img/Equipa/linus.png"/>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Yvonne_H_">
+                    <img src="./img/Equipa/Yvonne_H_.png"/>
+                    <div class="tooltiptext">@Yvonne_H_</div>
                     <h3>YVONNE HO</h3>
                     <p>CFO</p>
                 </a>
-                <a>
-                    <img src="./img/Equipa/linus.png"/>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/nicklmg">
+                    <img src="./img/Equipa/nicklmg.png"/>
+                    <div class="tooltiptext">@nicklmg</div>
                     <h3>NICK LIGHT</h3>
                     <p>COO</p>
                 </a>
-                <a>
-                    <img src="./img/Equipa/linus.png"/>
-                    <h3>YAGO</h3>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/edzelyago">
+                    <img src="./img/Equipa/edyago.png"/>
+                    <div class="tooltiptext">@edyago</div>
+                    <h3>EDZEL YAGO</h3>
                     <p>Production Manager</p>
                 </a>
-                <a>
-                    <img src="./img/Equipa/linus.png"/>
-                    <h3>Linus</h3>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Brandon_Y_Lee">
+                    <img src="./img/Equipa/Brandon_Y_Lee.png"/>
+                    <div class="tooltiptext">@Brandon_Y_Lee</div>
+                    <h3>BRANDON LEE</h3>
                     <p>Cinematographer</p>
                 </a>
-                <a>
-                    <img src="./img/Equipa/linus.png"/>
-                    <h3>Linus</h3>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/colton_potter">
+                    <img src="./img/Equipa/colton_potter.png"/>
+                    <div class="tooltiptext">@colton_potter</div>
+                    <h3>COLTON POTTER</h3>
                     <p>Business Development Manager</p>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/dennyishung">
+                    <img src="./img/Equipa/dennyishung.png"/>
+                    <div class="tooltiptext">@dennyishung</div>
+                    <h3>DENNIS LIAO</h3>
+                    <p>Editor</p>
                 </a>
                 <a>
                     <img src="./img/Equipa/linus.png"/>
-                    <h3>Linus</h3>
-                    <p>Business Development Manager</p>
+                    <div class="tooltiptext">Matthias Krohn</div>
+                    <h3>MATTHIAS KROHN</h3>
+                    <p>Logistics Manager</p>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/james_strieb">
+                    <img src="./img/Equipa/linus.png"/>
+                    <div class="tooltiptext">@james_strieb</div>
+                    <h3>JAMES STRIEB</h3>
+                    <p>Writing Manager</p>
                 </a>
                 <a>
                     <img src="./img/Equipa/linus.png"/>
-                    <h3>Linus</h3>
-                    <p>Business Development Manager</p>
+                    <div class="tooltiptext">Matthias Krohn</div>
+                    <h3>MATTHIAS KROHN</h3>
+                    <p>Logistics Manager</p>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/TheRikeys">
+                    <img src="./img/Equipa/linus.png"/>
+                    <div class="tooltiptext">@TheRikeys</div>
+                    <h3>JAMES STRIEB</h3>
+                    <p>Writing Manager</p>
                 </a>
             </div>
         </div>
@@ -91,5 +118,11 @@
         <div class="footer">
             <span>&copy; 2020/2021 - Linus Tech Tips</span>
         </div>
+
+        <script>
+            window.addEventListener('scroll', () => {
+                document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+            }, false);
+        </script>
     </body>
 </html>

@@ -3,6 +3,10 @@
     --page-width: 80%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -101,119 +105,26 @@ li{
 .sub-logo{
     max-width: 3rem;
     margin-right: 30px;
+
+    animation: sublogoShow 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -5s);
+}
+
+@keyframes sublogoShow{
+    0%{
+        margin-right: 0;
+        opacity: 0;
+    }
+
+    100%{
+        margin-right: 30px;
+        opacity: 1;
+    }
 }
 
 .sub-logo:hover{
     cursor: pointer;
-}
-
-.entrada{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.entrada-titulo{
-    background-image: url("./img/linusmediagroup.jpg");
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-size: cover;
-}
-
-.entrada-titulo img{
-    position: relative;
-    z-index: 0;
-    width: var(--page-width);
-    animation: slide-left 1s;
-}
-@keyframes slide-left {
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.entrada-descrição{
-    width: var(--page-width);
-    font-size: var(--font-size);
-    text-align: center;
-}
-
-.descrição{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: var(--font-size);
-}
-
-
-.links{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 40px;
-}
-
-.links div{
-    margin-right: 70px;
-    text-align: center;
-    font-size: var(--font-size);
-}
-
-.links div:last-child{
-    margin-right: 0;
-}
-
-.channel-showcase{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #333333;
-    padding: 20px 5px;
-}
-
-.show-channel{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    width: var(--page-width);
-    font-size: var(--font-size);
-
-    animation: channelIntro 1s linear;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -2.5s);
-}
-
-@keyframes channelIntro {
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.show-channel iframe{
-    border-radius: 5px;
-    margin-left: 20px;
 }
 
 .conteudo-extra{
@@ -235,106 +146,6 @@ li{
     font-size: var(--font-size);
 }
 
-.sponsor-word{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    width: 100%;
-    margin: 15px;
-}
-.sponsor-word a{
-    width: 70%;
-    color: #333;
-}
-.sponsor-word a:hover{
-    cursor: pointer;
-}
-
-.grelha-patrocinadores{
-    display: grid;
-    margin: 20px 0;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-gap: 10px;
-    place-items: center;
-    animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.grelha-patrocinadores a{
-    position: relative;
-    z-index: 0;
-    color: #333;
-    background-color: hsl(17, 100%, 90%);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    transition: all 0.5s;
-    padding: 15px 5px;
-    min-height: 150px;
-    max-height: 150px;
-    text-decoration: none;
-    animation: sponsorGrid 1s;
-    animation-delay: calc(var(--order) * 100ms);
-}
-
-@keyframes sponsorGrid {
-    0%{
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.grelha-patrocinadores a img{
-    margin: auto;
-    max-width: 150px;
-    max-height: 80px;
-    min-width: 50px;
-    min-height: 20px;
-}
-
-.grelha-patrocinadores a:hover{
-    box-shadow: 0px 5px 10px hsl(0, 0%, 10%);
-    cursor: pointer;
-}
-
-.grelha-equipa{
-    display: grid;
-    margin: 20px 0;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-gap: 10px;
-    place-items: center;
-}
-
-.grelha-equipa a{
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.grelha-equipa a p, .grelha-equipa a h3{
-    margin: 0;
-}
-
 .footer{
     background: #333;
     color: #ffffff;
@@ -342,7 +153,6 @@ li{
     text-align: center;
     font-weight: 100;
 }
-
 
 
 
