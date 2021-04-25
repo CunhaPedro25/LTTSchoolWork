@@ -87,6 +87,7 @@ li{
     justify-content: center;
     padding: 5px 5px;
     font-size: var(--font-size);
+    z-index: 1;
 }
 
 .logo{
@@ -124,6 +125,8 @@ li{
 }
 
 .entrada-titulo img{
+    position: relative;
+    z-index: 0;
     width: var(--page-width);
     animation: slide-left 1s;
 }
@@ -182,6 +185,7 @@ li{
 }
 
 .show-channel{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -189,6 +193,22 @@ li{
     margin: 15px;
     width: var(--page-width);
     font-size: var(--font-size);
+
+    animation: channelIntro 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -2.5s);
+}
+
+@keyframes channelIntro {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .show-channel iframe{
@@ -251,6 +271,8 @@ li{
 }
 
 .grelha-patrocinadores a{
+    position: relative;
+    z-index: 0;
     color: #333;
     background-color: hsl(17, 100%, 90%);
     border-radius: 5px;

@@ -89,5 +89,11 @@
         <div class="footer">
             <span>&copy; 2020/2021 - Linus Tech Tips</span>
         </div>
+
+        <script>
+            window.addEventListener('scroll', () => {
+                document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+            }, false);
+        </script>
     </body>
 </html>
