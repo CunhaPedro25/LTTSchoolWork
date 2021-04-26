@@ -7,7 +7,7 @@
 }
 
 .entrada-titulo{
-    height: 500px;
+    height: 65vh;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -35,6 +35,7 @@
     width: var(--page-width);
     font-size: var(--font-size);
     text-align: center;
+    padding: 0 20px 5px 5px;
 }
 
 .descrição{
@@ -54,6 +55,10 @@
     padding: 20px 5px;
 }
 
+.entrada-descrição .botao, .channel-showcase .botao, .conteudo-extra .botao{
+    border: 2px solid rgb(219, 65, 5);
+}
+
 .show-channel{
     position: relative;
     display: flex;
@@ -64,11 +69,16 @@
     width: var(--page-width);
     font-size: var(--font-size);
     opacity: 0;
+    width: 80%;
 
     animation: channelIntro 1s linear;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -3.5s + (var(--order) * 100ms));
+    animation-delay: calc(var(--scroll) * -3s + (var(--order) * 100ms));
     animation-fill-mode: forwards;
+}
+
+.show-channel div{
+    width: 80%;
 }
 
 @keyframes channelIntro {
@@ -86,6 +96,7 @@
 .show-channel iframe{
     border-radius: 5px;
     margin-left: 20px;
+    height: 250px;
 }
 
 

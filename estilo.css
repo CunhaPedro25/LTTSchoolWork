@@ -63,15 +63,6 @@ li{
     width: 100%;
 }
 
-.page-content section{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.channel-showcase .botao, .conteudo-extra .botao{
-    border: 2px solid rgb(219, 65, 5);
-}
-
 .header{
     background: #333;
     width: 100%;
@@ -127,8 +118,16 @@ li{
     cursor: pointer;
 }
 
+.grelha{
+    display: grid;
+    margin: 20px 0;
+    grid-gap: 10px;
+    place-items: center;
+}
+
+
 .conteudo-extra{
-    background: #f1f2ea;
+    background: hsl(17, 100%, 90%);;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,9 +151,13 @@ li{
     padding: 20px 0;
     text-align: center;
     font-weight: 100;
+    display: flex;
+    flex-direction: column;
 }
 
-
+.footer a{
+    color: #ffffff;
+}
 
 .menu{
     margin: 1px 0px;
