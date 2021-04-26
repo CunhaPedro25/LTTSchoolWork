@@ -1,12 +1,81 @@
-.grelha-equipa{
-    display: grid;
-    margin: 20px 0;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-gap: 10px;
-    place-items: center;
+.descrição{
+    text-align: center;
+    width: 80%;
 }
 
-.grelha-equipa a{
+.divisao{
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.channels{
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    margin: 20px 0;
+}
+
+.linha a{
+    margin: 5px 5px;
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
+    animation: slideDown 0.5s;
+}
+
+@keyframes slideDown{
+    0%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.linha a:hover{
+    cursor: pointer;
+    animation: slideUp 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-5%);
+    }
+}
+
+.linha a img{
+    max-width: 150px;
+}
+
+.equipa{
+    grid-template-columns: 300px 300px 300px 300px;
+}
+
+.equipa a{
     position: relative;
     text-decoration: none;
     color: #333;
@@ -17,41 +86,40 @@
     text-align: center;
 }
 
-.grelha-equipa a:hover{
+.equipa a:hover{
     cursor: pointer;
 }
 
-.grelha-equipa a p, .grelha-equipa a h3{
+.equipa a p, .grelha-equipa a h3{
     margin: 0;
 }
 
-.grelha-equipa a p{
+.equipa a p{
     font-size: 15px;
 }
 
-.grelha-equipa img{
+.equipa img{
     border-radius: 5px;
 }
 
-.grelha-equipa a .tooltiptext {
+.equipa a .tooltiptext {
     visibility: hidden;
     font-size: 12px;
-    top: 50%;
+    top: 55%;
     width: 120px;
-    background-color: black;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0px;
     position: absolute;
     z-index: 0;
     
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 0.5s;
 }
 
-.grelha-equipa a .tooltiptext::after {
+.equipa a .tooltiptext::after {
     content: " ";
     position: absolute;
     bottom: 100%;  /* At the top of the tooltip */
@@ -59,14 +127,19 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent #333 transparent;
   }
   
-.grelha-equipa a:hover .tooltiptext {
+.equipa a:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
-.grelha-equipa a .tooltiptext:hover {
-    text-decoration: underline;
+.social-media{
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
